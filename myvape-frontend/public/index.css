@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@font-face{ font-family: Panton; src: url(fonts/Panton.otf);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #141416;
+  }
+
+/*loading*/
+
+#loadingcontainer{
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #141416;
+  transition: opacity 2s ease-out;
+  z-index: 999;
+}
+
+.loadinglogo{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  z-index: 10;
+}
+
+.loadinglogo.fade-in{
+  opacity: 1;
+}
+
+/*navbar*/
+
+.navbar{
+  position: fixed;
+  width: 100%;
+    height: 70px;
+    background-color: #101011;
+    margin: 0 auto;
+    top:  0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 999;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition:  0.4s ease-in-out;
+}
+
+
+.logo{
+  margin-bottom: 5px;
+  z-index: 8;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.navbar h1{
+    color: rgb(255, 255, 255);
+}
+
+.navcontent a:hover{
+    color: rgb(233, 233, 233);
+}
+
+
+.navbar img{
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.logoname{
+    font-size: 11px;
+    margin-top: -7px;
+    margin-right: 3px;
+    text-align: center;
+    font-family: Panton;
+}
+
+.logo{
+  position: absolute;
+}
+
+.menucontainer{
+  width: 50px;
+  height: 59px;
+  margin-right: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menucontent{
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 21px;
+  width: 26px;
+  justify-content: space-between;
+}
+
+.menu1{
+  width: 13px;
+  height: 3px;
+  background-color: white;
+  border-radius: 1.5px;
+}
+
+
+.menu2{
+  width: 26px;
+  height: 3px;
+  background-color: white;
+  border-radius: 1.5px;
+}
+
+.menu3{
+  width: 13px;
+  height: 3px;
+  background-color: white;
+  border-radius: 1.5px;
+  margin-left: 50%;
+}
+
+#menu-close{
+  transition: all 0.5 ease-out;
+  color: white;
+  font-size: 28px;
+  margin-left: 90px;
+  margin-top: 22px;
+}
+
+.menu-open{
+  left: 0;
+  top: 0;
+  margin-top: 70px;
+  z-index: 999;
+  width: 150px;
+  height: 100%;
+  position: fixed;
+  display: none;
+  background-color: #141416;
+  right: 0px;
+}
+
+.menu-open{
+  animation: smooth-in 0.2s ease-in-out;
+}
+
+#menu-close{
+  animation: smooth-out 0.2s ease-in-out;
+}
+
+
+@keyframes smooth-in {
+  0% {
+    opacity: 0.5;
+    transform: translatex(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.menu-open-content{
+  margin-top: 30px;
+  font-family: Panton;
+  width: 150px;
+  text-align: center;
+}
+
+.menu-link{
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.menu-open-content a{
+  color: white;
+}
+
+.login-menu{
+  text-align: center;
+}
+
+/*footer*/
+
+.footer{
+  margin-top: 100px;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}
+
+.footercontent{
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 90%;
+  height: 50px;
+}
+
+.footercontent a{
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+  font-family: panton;
+}
+
+
+/*other*/
+
+.divider{
+  margin: 0px auto;
+  background-color: rgb(255, 255, 255);
+  opacity: 30%;
+  width: 85%;
+  height: 2px;
+  border-radius: 15px;
+}
